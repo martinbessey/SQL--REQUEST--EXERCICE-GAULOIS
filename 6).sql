@@ -1,0 +1,3 @@
+SELECT NOM_INGREDIENT, COUT_INGREDIENT,QTE
+FROM ingredient i, potion p,compose c
+WHERE p.NOM_POTION = 'POTION V'

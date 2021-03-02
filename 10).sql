@@ -1,0 +1,5 @@
+SELECT NOM_POTION
+FROM potion p, ingredient i, compose c
+WHERE c.ID_INGREDIENT= i.ID_INGREDIENT
+AND c.ID_POTION = p.ID_POTION
+AND i.ID_INGREDIENT='Cerise'
