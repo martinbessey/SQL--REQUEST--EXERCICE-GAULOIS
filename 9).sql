@@ -1,5 +1,4 @@
-SELECT NOM_BATAILLE 
-FROM bataille b, prise_casque p
-WHERE b.ID_BATAILLE=p.ID_BATAILLE
-GROUP BY NOM_BATAILLE
-HAVING MAX(QTE)
+SELECT nbc.NOM_BATAILLE
+FROM nb_casques_bataille nbc
+WHERE nbc.NB_CASQUES=(SELECT MAX(nbc.NB_CASQUES)
+                       FROM nb_casques_bataille nbc)
